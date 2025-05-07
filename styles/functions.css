@@ -1,0 +1,18 @@
+/* own capacity input reveal */
+label:has(input[id="capacity"]) {
+    + input {
+        display: none;
+    }
+}
+
+label:has(input[id="capacity"]:checked) {
+    + input {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+/* disable other options */
+section:has(input[id="capacity"]:checked) #plantMaterial {
+    display: none;
+}
