@@ -7,8 +7,9 @@
 	--color-background: #5b954b;
 	--color-text: #fff;
 	--font-family: "BeVietnamPro", Arial, sans-serif;
+	--product-size: "0,1L";
+	--material-size: "1L";
 }
-
 
 * {
 	margin: 0;
@@ -60,7 +61,7 @@ label {
 	> input {
 		margin-right: 0.5rem;
 	}
-} 
+}
 
 .icon {
 	background-color: transparent;
@@ -92,4 +93,26 @@ label {
 	}
 }
 
+.illustrations {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	margin: 2rem 0;
 
+	& div {
+		position: relative;
+
+		&::before {
+			content: var(--product-size);
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:nth-of-type(2)::before {
+			content: var(--material-size);
+			left: 43%;
+		}
+	}
+}
