@@ -1,0 +1,121 @@
+[
+    {
+        "group": "Kamerplanten",
+        "id": "kamerplanten",
+        "material": [
+            {
+                "size": "300ml"
+            },
+            {
+                "size": "1L"
+            },
+            {
+                "size": "2L"
+            }
+        ],
+        "type": [
+            {
+                "name": "Bladplanten",
+                "id": "bladplanten",
+                "apl": 0.3
+            },
+            {
+                "name": "Bloeiende planten",
+                "id": "bloeiende-planten",
+                "apl": 0.3
+            },
+            {
+                "name": "Cactussen en vetplanten",
+                "id": "cactussen-en-vetplanten",
+                "apl": 0.3
+            },
+            {
+                "name": "Klim- en hangplanten",
+                "id": "klim-en-hangplanten",
+                "apl": 0.3
+            },
+            {
+                "name": "Palmen",
+                "id": "palmen",
+                "apl": 0.3
+            }
+        ]
+    },
+    {
+        "group": "Buitenplanten",
+        "id": "buitenplanten",
+        "material": [
+            {
+                "size": "3L",
+                "apl": 0.3
+            },
+            {
+                "size": "5L",
+                "apl": 0.3
+            },
+            {
+                "size": "10L",
+                "apl": 0.3
+            }
+        ],
+        "type": [
+            {
+                "name": "Potplanten",
+                "id": "potplanten",
+                "apl": 0.3
+            },
+            {
+                "name": "Bloembollen",
+                "id": "bloembollen",
+                "apl": 0.3
+            },
+            {
+                "name": "Snijbloemen",
+                "id": "snijbloemen",
+                "apl": 0.3
+            },
+            {
+                "name": "Perkgoed",
+                "id": "perkgoed",
+                "apl": 0.3
+            }
+        ]
+    },
+    {
+        "group": "Groente en Fruit",
+        "id": "groente-en-fruit",
+        "material": [
+            {
+                "size": "3L"
+            },
+            {
+                "size": "5L"
+            },
+            {
+                "size": "10L"
+            }
+        ],
+        "type": [
+            {
+                "name": "Aardappels",
+                "id": "aardappels",
+                "apl": 0.3
+            },
+            {
+                "name": "Bieten",
+                "id": "bieten",
+                "apl": 0.3
+            },
+            {
+                "name": "Fruit",
+                "id": "fruit",
+                "apl": 0.3
+            },
+            {
+                "name": "Vollegrondsgroente",
+                "id": "vollegrondsgroente",
+                "apl": 0.3
+            }
+        ]
+    }
+]

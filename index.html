@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bereken jouw plantenvoeding hoeveelheid</title>
+		<link rel="stylesheet" href="./styles/global.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<h1>Bereken jouw plantenvoeding hoeveelheid</h1>
+			<p>
+				Planten verzorg je met liefde en iedere plant heeft dit op een
+				andere manier nodig. Hier kun zien wat jouw plant nodig heeft.
+			</p>
+
+			<section>
+				<h2>Groep</h2>
+				<button class="icon help">
+					<i data-lucide="circle-help"></i>
+					<span class="tooltip">Wat is een plantgroep?</span>
+				</button>
+				<div id="plantGroup">
+					<div>
+						<label for="kamerplanten"> Kamerplanten</label>
+						<input
+							type="radio"
+							name="group"
+							id="kamerplanten"
+							value="kamerplanten"
+						/>
+					</div>
+					<div>
+						<label for="buitenplanten"> Buitenplanten</label>
+						<input
+							type="radio"
+							name="group"
+							id="buitenplanten"
+							value="buitenplanten"
+						/>
+					</div>
+					<div>
+						<label for="groente-en-fruit"> Groente en Fruit</label>
+						<input
+							type="radio"
+							name="group"
+							id="groente-en-fruit"
+							value="groente-en-fruit"
+						/>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Plantsoort</h2>
+				<button class="icon help">
+					<i data-lucide="circle-help"></i>
+					<span class="tooltip">Wat is een plantsoort?</span>
+				</button>
+				<div id="plantType">
+					<div id="kamerplanten-group" class="type">
+						<div>
+							<label for="bladplanten"> Bladplanten</label>
+							<input
+								type="radio"
+								name="type"
+								id="bladplanten"
+								value="bladplanten"
+							/>
+						</div>
+						<div>
+							<label for="bloeiende-planten">
+								Bloeiende planten</label
+							>
+							<input
+								type="radio"
+								name="type"
+								id="bloeiende-planten"
+								value="bloeiende-planten"
+							/>
+						</div>
+						<div>
+							<label for="cactussen-en-vetplanten">
+								Cactussen en vetplanten</label
+							>
+							<input
+								type="radio"
+								name="type"
+								id="cactussen-en-vetplanten"
+								value="cactussen-en-vetplanten"
+							/>
+						</div>
+						<div>
+							<label for="klim-en-hangplanten">
+								Klim- en hangplanten</label
+							>
+							<input
+								type="radio"
+								name="type"
+								id="klim-en-hangplanten"
+								value="klim-en-hangplanten"
+							/>
+						</div>
+						<div>
+							<label for="palmen"> Palmen</label>
+							<input
+								type="radio"
+								name="type"
+								id="palmen"
+								value="palmen"
+							/>
+						</div>
+					</div>
+					<div id="buitenplanten-group" class="type">
+						<div>
+							<label for="potplanten"> Potplanten</label>
+							<input
+								type="radio"
+								name="type"
+								id="potplanten"
+								value="potplanten"
+							/>
+						</div>
+						<div>
+							<label for="bloembollen"> Bloembollen</label>
+							<input
+								type="radio"
+								name="type"
+								id="bloembollen"
+								value="bloembollen"
+							/>
+						</div>
+						<div>
+							<label for="snijplanten"> Snijplanten</label>
+							<input
+								type="radio"
+								name="type"
+								id="snijplanten"
+								value="snijplanten"
+							/>
+						</div>
+						<div>
+							<label for="perkgoed"> Perkgoed</label>
+							<input
+								type="radio"
+								name="type"
+								id="perkgoed"
+								value="perkgoed"
+							/>
+						</div>
+					</div>
+					<div id="groente-en-fruit-group" class="type">
+						<div>
+							<label for="aardappels"> Aardappels</label>
+							<input
+								type="radio"
+								name="type"
+								id="aardappels"
+								value="aardappels"
+							/>
+						</div>
+						<div>
+							<label for="bieten"> Bieten</label>
+							<input
+								type="radio"
+								name="type"
+								id="bieten"
+								value="bieten"
+							/>
+						</div>
+						<div>
+							<label for="fruit"> Fruit</label>
+							<input
+								type="radio"
+								name="type"
+								id="fruit"
+								value="fruit"
+							/>
+						</div>
+						<div>
+							<label for="vollegrondsgroente"> Vollegrondsgroente</label>
+							<input
+								type="radio"
+								name="type"
+								id="vollegrondsgroente"
+								value="vollegrondsgroente"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Materiaal</h2>
+				<p>
+					Kies hier de grootte van het materiaal dat je gebruikt. Aan
+					de hand hiervan zie je wat de mengverhouding van het product
+					is.
+				</p>
+				<div id="plantMaterial">
+					<div id="kamerplanten-materiaal" class="material">
+						<div>
+							<label for="300ml"> 300ml </label>
+							<input
+								type="radio"
+								name="material"
+								id="300ml"
+								value="300ml"
+							/>
+						</div>
+						<div>
+							<label for="1L"> 1L </label>
+							<input
+								type="radio"
+								name="material"
+								id="1L"
+								value="1L"
+							/>
+						</div>
+						<div>
+							<label for="2L"> 2L </label>
+							<input
+								type="radio"
+								name="material"
+								id="2L"
+								value="2L"
+							/>
+						</div>
+					</div>
+					<div id="buitenplanten-materiaal" class="material">
+						<div>
+							<label for="3L"> 3L </label>
+							<input
+								type="radio"
+								name="material"
+								id="3L"
+								value="3L"
+							/>
+						</div>
+						<div>
+							<label for="5L"> 5L </label>
+							<input
+								type="radio"
+								name="material"
+								id="5L"
+								value="5L"
+							/>
+						</div>
+						<div>
+							<label for="10L"> 10L </label>
+							<input
+								type="radio"
+								name="material"
+								id="10L"
+								value="10L"
+							/>
+						</div>
+					</div>
+					<div id="groente-en-fruit-materiaal" class="material">
+						<div>
+							<label for="3L"> 3L </label>
+							<input
+								type="radio"
+								name="material"
+								id="3L"
+								value="3L"
+							/>
+						</div>
+						<div>
+							<label for="5L"> 5L </label>
+							<input
+								type="radio"
+								name="material"
+								id="5L"
+								value="5L"
+							/>
+						</div>
+						<div>
+							<label for="10L"> 10L </label>
+							<input
+								type="radio"
+								name="material"
+								id="10L"
+								value="10L"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="./scripts/getPlantData.js"></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<script>
+			lucide.createIcons();
+		</script>
+	</body>
+</html>

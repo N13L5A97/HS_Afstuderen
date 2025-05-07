@@ -1,0 +1,109 @@
+:root {
+	--color-background: #5b954b;
+	--color-text: #fff;
+	--font-family: "BeVietnamPro", Arial, sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin-top: 2rem;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-family);
+	font-weight: 400;
+	padding: 1rem;
+}
+
+label {
+	margin-left: 1rem;
+}
+
+h1 {
+	font-size: clamp(30px, 5vw, 50px);
+	max-width: 70vw;
+	margin: 1rem 0;
+	font-weight: 600;
+}
+h2 {
+	font-size: clamp(20px, 4vw, 40px);
+	margin: 2rem 0 0.5rem 0;
+	font-weight: 600;
+}
+
+p {
+	font-size: clamp(16px, 3vw, 20px);
+	max-width: 70ch;
+	margin-bottom: 1rem;
+}
+
+section {
+	max-width: 50rem;
+	position: relative;
+	margin: 2rem 0;
+}
+
+.icon {
+	background-color: transparent;
+	border: none;
+	color: var(--color-text);
+	cursor: pointer;
+
+	&.help {
+		position: absolute;
+		height: 2rem;
+		top: 0;
+		right: 0;
+	}
+
+	.tooltip {
+		position: absolute;
+		opacity: 0;
+		right: 100%;
+		background-color: var(--color-text);
+		color: var(--color-background);
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		font-size: clamp(10px, 2vw, 15px);
+		margin-top: 1rem;
+		margin-left: -1rem;
+	}
+	&:hover {
+		.tooltip {
+			opacity: 1;
+		}
+	}
+}
+
+.type,
+.material {
+	display: none;
+}
+
+section:has(input[value="kamerplanten"]:checked) ~ section #kamerplanten-group,
+section:has(input[value="kamerplanten"]:checked)
+	~ section
+	#kamerplanten-materiaal {
+	display: block;
+}
+
+section:has(input[value="buitenplanten"]:checked)
+	~ section
+	#buitenplanten-group,
+section:has(input[value="buitenplanten"]:checked)
+	~ section
+	#buitenplanten-materiaal {
+	display: block;
+}
+
+section:has(input[value="groente-en-fruit"]:checked)
+	~ section
+	#groente-en-fruit-group,
+section:has(input[value="groente-en-fruit"]:checked)
+	~ section
+	#groente-en-fruit-materiaal {
+	display: block;
+}
