@@ -1,8 +1,12 @@
+/* import other stylesheet */
+@import url("./nojs.css");
+
 :root {
 	--color-background: #5b954b;
 	--color-text: #fff;
 	--font-family: "BeVietnamPro", Arial, sans-serif;
 }
+
 
 * {
 	margin: 0;
@@ -20,7 +24,7 @@ body {
 
 label {
 	margin-left: 1rem;
-}
+}         
 
 h1 {
 	font-size: clamp(30px, 5vw, 50px);
@@ -78,32 +82,4 @@ section {
 	}
 }
 
-.type,
-.material {
-	display: none;
-}
 
-section:has(input[value="kamerplanten"]:checked) ~ section #kamerplanten-group,
-section:has(input[value="kamerplanten"]:checked)
-	~ section
-	#kamerplanten-materiaal {
-	display: block;
-}
-
-section:has(input[value="buitenplanten"]:checked)
-	~ section
-	#buitenplanten-group,
-section:has(input[value="buitenplanten"]:checked)
-	~ section
-	#buitenplanten-materiaal {
-	display: block;
-}
-
-section:has(input[value="groente-en-fruit"]:checked)
-	~ section
-	#groente-en-fruit-group,
-section:has(input[value="groente-en-fruit"]:checked)
-	~ section
-	#groente-en-fruit-materiaal {
-	display: block;
-}

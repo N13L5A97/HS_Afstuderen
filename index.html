@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bereken jouw plantenvoeding hoeveelheid</title>
 		<link rel="stylesheet" href="./styles/global.css" />
+        <!-- <link rel="stylesheet" href="./styles/nojs.css" /> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -28,31 +29,32 @@
 				</button>
 				<div id="plantGroup">
 					<div>
+                        <input
+                        type="radio"
+                        name="group"
+                        id="kamerplanten"
+                        value="kamerplanten"
+                        checked
+						/>
 						<label for="kamerplanten"> Kamerplanten</label>
-						<input
-							type="radio"
-							name="group"
-							id="kamerplanten"
-							value="kamerplanten"
-						/>
 					</div>
 					<div>
+                        <input
+                        type="radio"
+                        name="group"
+                        id="buitenplanten"
+                        value="buitenplanten"
+						/>
 						<label for="buitenplanten"> Buitenplanten</label>
-						<input
-							type="radio"
-							name="group"
-							id="buitenplanten"
-							value="buitenplanten"
-						/>
 					</div>
 					<div>
-						<label for="groente-en-fruit"> Groente en Fruit</label>
-						<input
-							type="radio"
-							name="group"
-							id="groente-en-fruit"
-							value="groente-en-fruit"
+                        <input
+                        type="radio"
+                        name="group"
+                        id="groente-en-fruit"
+                        value="groente-en-fruit"
 						/>
+						<label for="groente-en-fruit"> Groente en Fruit</label>
 					</div>
 				</div>
 			</section>
@@ -65,131 +67,134 @@
 				<div id="plantType">
 					<div id="kamerplanten-group" class="type">
 						<div>
+                            <input
+                            type="radio"
+                            name="type_1"
+                            id="bladplanten"
+                            value="bladplanten"
+                            checked
+							/>
 							<label for="bladplanten"> Bladplanten</label>
-							<input
-								type="radio"
-								name="type"
-								id="bladplanten"
-								value="bladplanten"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_1"
+                            id="bloeiende-planten"
+                            value="bloeiende-planten"
+							/>
 							<label for="bloeiende-planten">
-								Bloeiende planten</label
+                            Bloeiende planten</label
 							>
-							<input
-								type="radio"
-								name="type"
-								id="bloeiende-planten"
-								value="bloeiende-planten"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_1"
+                            id="cactussen-en-vetplanten"
+                            value="cactussen-en-vetplanten"
+							/>
 							<label for="cactussen-en-vetplanten">
 								Cactussen en vetplanten</label
 							>
-							<input
-								type="radio"
-								name="type"
-								id="cactussen-en-vetplanten"
-								value="cactussen-en-vetplanten"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_1"
+                            id="klim-en-hangplanten"
+                            value="klim-en-hangplanten"
+							/>
 							<label for="klim-en-hangplanten">
 								Klim- en hangplanten</label
 							>
-							<input
-								type="radio"
-								name="type"
-								id="klim-en-hangplanten"
-								value="klim-en-hangplanten"
-							/>
 						</div>
 						<div>
-							<label for="palmen"> Palmen</label>
-							<input
-								type="radio"
-								name="type"
-								id="palmen"
-								value="palmen"
+                            <input
+                            type="radio"
+                            name="type_1"
+                            id="palmen"
+                            value="palmen"
 							/>
+							<label for="palmen"> Palmen</label>
 						</div>
 					</div>
 					<div id="buitenplanten-group" class="type">
 						<div>
+                            <input
+                            type="radio"
+                            name="type_2"
+                            id="potplanten"
+                            value="potplanten"
+                            checked
+							/>
 							<label for="potplanten"> Potplanten</label>
-							<input
-								type="radio"
-								name="type"
-								id="potplanten"
-								value="potplanten"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_2"
+                            id="bloembollen"
+                            value="bloembollen"
+							/>
 							<label for="bloembollen"> Bloembollen</label>
-							<input
-								type="radio"
-								name="type"
-								id="bloembollen"
-								value="bloembollen"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_2"
+                            id="snijplanten"
+                            value="snijplanten"
+							/>
 							<label for="snijplanten"> Snijplanten</label>
-							<input
-								type="radio"
-								name="type"
-								id="snijplanten"
-								value="snijplanten"
-							/>
 						</div>
 						<div>
-							<label for="perkgoed"> Perkgoed</label>
-							<input
-								type="radio"
-								name="type"
-								id="perkgoed"
-								value="perkgoed"
+                            <input
+                            type="radio"
+                            name="type_2"
+                            id="perkgoed"
+                            value="perkgoed"
 							/>
+							<label for="perkgoed"> Perkgoed</label>
 						</div>
 					</div>
 					<div id="groente-en-fruit-group" class="type">
 						<div>
+                            <input
+                            type="radio"
+                            name="type_3"
+                            id="aardappels"
+                            value="aardappels"
+                            checked
+							/>
 							<label for="aardappels"> Aardappels</label>
-							<input
-								type="radio"
-								name="type"
-								id="aardappels"
-								value="aardappels"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_3"
+                            id="bieten"
+                            value="bieten"
+							/>
 							<label for="bieten"> Bieten</label>
-							<input
-								type="radio"
-								name="type"
-								id="bieten"
-								value="bieten"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="type_3"
+                            id="fruit"
+                            value="fruit"
+							/>
 							<label for="fruit"> Fruit</label>
-							<input
-								type="radio"
-								name="type"
-								id="fruit"
-								value="fruit"
-							/>
 						</div>
 						<div>
-							<label for="vollegrondsgroente"> Vollegrondsgroente</label>
-							<input
-								type="radio"
-								name="type"
-								id="vollegrondsgroente"
-								value="vollegrondsgroente"
+                            <input
+                            type="radio"
+                            name="type_3"
+                            id="vollegrondsgroente"
+                            value="vollegrondsgroente"
 							/>
+							<label for="vollegrondsgroente"> Vollegrondsgroente</label>
 						</div>
 					</div>
 				</div>
@@ -204,92 +209,99 @@
 				<div id="plantMaterial">
 					<div id="kamerplanten-materiaal" class="material">
 						<div>
+                            <input
+                            type="radio"
+                            name="material_1"
+                            id="300ml"
+                            value="300ml"
+							/>
 							<label for="300ml"> 300ml </label>
-							<input
-								type="radio"
-								name="material"
-								id="300ml"
-								value="300ml"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="material_1"
+                            id="1L"
+                            value="1L"
+                            checked
+							/>
 							<label for="1L"> 1L </label>
-							<input
-								type="radio"
-								name="material"
-								id="1L"
-								value="1L"
-							/>
 						</div>
 						<div>
-							<label for="2L"> 2L </label>
-							<input
-								type="radio"
-								name="material"
-								id="2L"
-								value="2L"
+                            <input
+                            type="radio"
+                            name="material_1"
+                            id="2L"
+                            value="2L"
 							/>
+							<label for="2L"> 2L </label>
 						</div>
 					</div>
 					<div id="buitenplanten-materiaal" class="material">
 						<div>
+                            <input
+                            type="radio"
+                            name="material_2"
+                            id="3L"
+                            value="3L"
+							/>
 							<label for="3L"> 3L </label>
-							<input
-								type="radio"
-								name="material"
-								id="3L"
-								value="3L"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="material_2"
+                            id="5L"
+                            value="5L"
+							/>
 							<label for="5L"> 5L </label>
-							<input
-								type="radio"
-								name="material"
-								id="5L"
-								value="5L"
-							/>
 						</div>
 						<div>
-							<label for="10L"> 10L </label>
-							<input
-								type="radio"
-								name="material"
-								id="10L"
-								value="10L"
+                            <input
+                            type="radio"
+                            name="material"
+                            id="10L"
+                            value="10L"
 							/>
+							<label for="10L"> 10L </label>
 						</div>
 					</div>
 					<div id="groente-en-fruit-materiaal" class="material">
 						<div>
+                            <input
+                            type="radio"
+                            name="material_3"
+                            id="3L"
+                            value="3L"
+							/>
 							<label for="3L"> 3L </label>
-							<input
-								type="radio"
-								name="material"
-								id="3L"
-								value="3L"
-							/>
 						</div>
 						<div>
+                            <input
+                            type="radio"
+                            name="material_3"
+                            id="5L"
+                            value="5L"
+                            checked
+							/>
 							<label for="5L"> 5L </label>
-							<input
-								type="radio"
-								name="material"
-								id="5L"
-								value="5L"
-							/>
 						</div>
 						<div>
-							<label for="10L"> 10L </label>
-							<input
-								type="radio"
-								name="material"
-								id="10L"
-								value="10L"
+                            <input
+                            type="radio"
+                            name="material_3"
+                            id="10L"
+                            value="10L"
 							/>
+							<label for="10L"> 10L </label>
 						</div>
 					</div>
 				</div>
+                
+                <label for="capacity">
+                    <input type="checkbox" id="capacity" />
+                    Zelf de inhoud van je materiaal invullen
+                </label>
 			</section>
 		</main>
 		<script src="./scripts/getPlantData.js"></script>
