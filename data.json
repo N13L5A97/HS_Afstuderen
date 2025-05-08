@@ -5,7 +5,8 @@
         "periods": [
             {
                 "startMonth": 3,
-                "endMonth": 10
+                "endMonth": 10,
+                "ratio": 3
             }
         ],
         "material": [
@@ -53,7 +54,13 @@
         "periods": [
             {
                 "startMonth": 3,
-                "endMonth": 4
+                "endMonth": 4,
+                "ratio": 1
+            },
+            {
+                "startMonth": 9,
+                "endMonth": 10,
+                "ratio": 1
             }
         ],
         "material": [
@@ -99,7 +106,13 @@
         "periods": [
             {
                 "startMonth": 2,
-                "endMonth": 4
+                "endMonth": 4,
+                "ratio": 1
+            },
+            {
+                "startMonth": 7,
+                "endMonth": 8,
+                "ratio": 1
             }
         ],
         "material": [

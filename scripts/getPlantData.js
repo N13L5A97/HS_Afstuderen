@@ -176,6 +176,8 @@ function updateMaterial(data) {
 		);
 	}
 
+	getSelectedMaterial();
+
 	console.log("Capacity checkbox is unchecked");
 	// When selection changes update plant material sizes
 	const materialRadios = document.querySelectorAll('input[name="size"]');
@@ -239,30 +241,47 @@ function updatePeriods(data) {
 	if (plantGroup && plantGroup.periods) {
 		console.log("Plant periods", selectedGroup, ":", plantGroup.periods);
 
+		// Remove periods
+		fullYear.innerHTML = "";
+
 		// Create div for each period with class
-		plantGroup.periods.forEach((period, index) => {
+		plantGroup.periods.forEach((period) => {
 			const div = document.createElement("div");
 			div.classList.add("period");
 
-			const span = document.createElement("span");
-			span.innerHTML = 1;
+			// create amount of spans based on the ratio
+			for (let i = 0; i < period.ratio; i++) {
+				const span = document.createElement("span");
+				span.innerHTML = i + 1;
+				div.appendChild(span);
 
-			div.appendChild(span);
+				//get current month
+				const d = new Date();
+				let month = d.getMonth();
+				const currentMonth = month + 1;
+				console.log("MAAND" + currentMonth);
+
+				// if currentmont is in a period make the period green otherwise red
+				if (currentMonth > period.endMonth){
+					span.style.setProperty(`background-color`, "red");
+				} else if (currentMonth => startMonth && currentMonth <= endMonth){
+					span.style.setProperty(`background-color`, "#5b954b");
+					span.style.setProperty(`color`, "#fff");
+				}
+			}
+
 			fullYear.appendChild(div);
 
 			console.log("period:", period.startMonth);
 
-			// Set the CSS variable for the selected material
-			document.documentElement.style.setProperty(
-				"--startMonth",
-				period.startMonth
-			);
+			// Set the CSS variable for startMonth
+			div.style.setProperty(`--startMonth`, period.startMonth);
 
-			// Set the CSS variable for the selected material
-			document.documentElement.style.setProperty(
-				"--endMonth",
-				period.endMonth
-			);
+			// Set the CSS variable for the endMonth
+			div.style.setProperty(`--endMonth`, period.endMonth);
+
+			// Set the CSS variable for amount
+			div.style.setProperty(`--ratio`, period.ratio);
 		});
 	} else {
 		console.error("Could not find periods for:", selectedGroup);

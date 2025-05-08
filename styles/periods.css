@@ -14,7 +14,7 @@
 :root{
     --startMonth: "3";
     --endMonth: 10;
-    --amount: 3;
+    --ratio: 3;
 }
 
 /* total period for feeding devide in grid  */
@@ -27,12 +27,13 @@
     height: 2rem;
 
     display: grid;
-    grid-template-columns: repeat(var(--amount), 1fr);
+    grid-template-columns: repeat(var(--ratio), 1fr);
     grid-template-rows: auto;
 
     border: solid black 1px;
     border-radius: 10rem;
     background-color: white;
+
 
     /* give items border */
     >span{
@@ -44,8 +45,19 @@
         font-size: clamp(.8rem, 1rem, 1.2rem);
         border-right: solid black 1px;
 
+        
+        &:first-of-type{
+            border-radius: 5rem 0 0 5rem;
+            
+        }
+        
         &:last-of-type{
             border: none;
+            border-radius: 0 5rem 5rem 0;
+        }
+        
+        &:only-of-type{
+            border-radius: 5rem;
         }
     }
 }
