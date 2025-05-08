@@ -56,7 +56,6 @@ function updatePlantTypes(data) {
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
-	// console.log("Selected group:", selectedGroup);
 
 	// Remove radio buttons
 	const plantType = document.getElementById("plantType");
@@ -67,8 +66,6 @@ function updatePlantTypes(data) {
 
 	// If the group is found, find the types
 	if (plantGroup && plantGroup.type) {
-		// console.log("Plant types for", selectedGroup, ":", plantGroup.type);
-
 		// Create radio buttons for each type in the selected group
 		plantGroup.type.forEach((type, index) => {
 			const div = document.createElement("div");
@@ -115,14 +112,23 @@ function updateMaterial(data) {
 	).value;
 	// console.log("Selected group:", selectedGroup);
 
+	// Get the selected group
+	const selectedType = document.querySelector(
+		'input[name="type"]:checked'
+	).value;
+	console.log("Selected type:", selectedType);
+
+	// Find the selected group
+	let plantGroup = data.find((g) => g.group == selectedGroup);
+	let plantType = plantGroup.type.find((t) => t.name == selectedType);
+
+	console.log(plantType.dilution)
+
 	// Remove radio buttons
 	const plantMaterial = document.getElementById("plantMaterial");
 	plantMaterial.innerHTML = "";
 
-	// Find the selected group
-	let plantGroup = data.find((g) => g.group == selectedGroup);
-
-	// If the group is found, find the types
+	// If the group is found, find the materials
 	if (plantGroup && plantGroup.material) {
 		// Create radio buttons for each material in the selected group
 		plantGroup.material.forEach((material, index) => {
@@ -149,7 +155,7 @@ function updateMaterial(data) {
 		});
 	} else {
 		console.error(
-			"Could not find plant group or types for:",
+			"Could not find plant group or materials for:",
 			selectedGroup
 		);
 	}
@@ -167,7 +173,8 @@ function updateMaterial(data) {
 		);
 
 		//product is material size * 0.1 (from liters to ml)
-		const productAmount = parseFloat(selectedMaterial) * 10;
+		const usage = parseFloat(selectedMaterial) * plantType.dilution * 100;
+		const productAmount = usage.toFixed()
 
 		//set css variable for product amount
 		document.documentElement.style.setProperty(

@@ -94,7 +94,7 @@
             {
                 "name": "Perkgoed",
                 "id": "perkgoed",
-                "dilution": 0.1,
+                "dilution": 0.4,
                 "period": [
                     {
                         "startMonth": 1,
