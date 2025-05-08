@@ -15,8 +15,8 @@
 }
 
 :root{
-    --startMonth: 2;
-    --endMonth: 5;
+    --startMonth: 3;
+    --endMonth: 10;
     --amount: 3;
 }
 
@@ -44,7 +44,7 @@
         width: 100%;
         height: 100%;
         align-items: center;
-        font-size: clamp(.8rem, 1vw, 1.2rem);
+        font-size: clamp(.8rem, 1rem, 1.2rem);
         border-right: solid black 1px;
 
         &:last-of-type{
@@ -60,11 +60,11 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: clamp(.8rem, 1vw, 1.2rem);
+    font-size: clamp(.8rem, 1rem, 1.2rem);
 }
 
 .currentMonth{
-    padding: .2rem .1rem;
+    padding: .2rem;
     border: solid black 1px;
     border-radius: .4rem;
     font-weight: 700;

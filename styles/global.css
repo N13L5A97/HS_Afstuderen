@@ -47,13 +47,13 @@ p {
 }
 
 section {
-	max-width: 50rem;
 	padding: 2rem;
 }
 
 article{
 	position: relative;
 	margin-bottom: 2rem;
+	max-width: 50rem;
 }
 
 label {
