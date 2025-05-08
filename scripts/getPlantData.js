@@ -37,18 +37,22 @@ async function getGroups() {
 	// Call updateMaterial function to update plant materials
 	updateMaterial(data);
 
+	// Call updatePeriods function to update plant periods
+	updatePeriods(data);
+
 	// When selection changes update plant types and materials
 	const groupRadios = document.querySelectorAll('input[name="group"]');
 	groupRadios.forEach((radio) => {
 		radio.addEventListener("change", () => {
 			updatePlantTypes(data);
 			updateMaterial(data);
+			updatePeriods(data);
 		});
 	});
 }
 
 function updatePlantTypes(data) {
-	// Get selected group
+	// Get the selected group
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
@@ -97,7 +101,7 @@ function updatePlantTypes(data) {
 }
 
 function updateMaterial(data) {
-	// Get selected group
+	// Get the selected group
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
@@ -193,30 +197,76 @@ function updateMaterial(data) {
 				const capacityValue = capacityInput.value;
 				console.log("Capacity value:", capacityValue);
 
-                //if value is empty set it to 1
-                if (capacityValue === "") {
-                    capacityValue = 1;
-                } else {
-                    // Set the CSS variable for the selected material
-                    document.documentElement.style.setProperty(
-                        "--material-size",
-                        `"` + capacityValue + `L"`
-                    );
-    
-                    //product is material size * 0.1 (from liters to ml)
-                    const productAmount = parseFloat(capacityValue) * 10;
-    
-                    //set css variable for product amount
-                    document.documentElement.style.setProperty(
-                        "--product-size",
-                        `"` + productAmount + `ml"`
-                    );
-                }
+				//if value is empty set it to 1
+				if (capacityValue === "") {
+					capacityValue = 1;
+				} else {
+					// Set the CSS variable for the selected material
+					document.documentElement.style.setProperty(
+						"--material-size",
+						`"` + capacityValue + `L"`
+					);
+
+					//product is material size * 0.1 (from liters to ml)
+					const productAmount = parseFloat(capacityValue) * 10;
+
+					//set css variable for product amount
+					document.documentElement.style.setProperty(
+						"--product-size",
+						`"` + productAmount + `ml"`
+					);
+				}
 			});
 		} else {
 			getSelectedMaterial();
 		}
 	});
+}
+
+function updatePeriods(data) {
+	// Get the selected group
+	const selectedGroup = document.querySelector(
+		'input[name="group"]:checked'
+	).value;
+	console.log("Selected group:", selectedGroup);
+
+	const fullYear = document.getElementById("fullYear");
+	// Find the selected group
+	let plantGroup = data.find((g) => g.group == selectedGroup);
+	console.log("plant group:", plantGroup);
+
+	// If the group is found, find the types
+	if (plantGroup && plantGroup.periods) {
+		console.log("Plant periods", selectedGroup, ":", plantGroup.periods);
+
+		// Create div for each period with class
+		plantGroup.periods.forEach((period, index) => {
+			const div = document.createElement("div");
+			div.classList.add("period");
+
+			const span = document.createElement("span");
+			span.innerHTML = 1;
+
+			div.appendChild(span);
+			fullYear.appendChild(div);
+
+			console.log("period:", period.startMonth);
+
+			// Set the CSS variable for the selected material
+			document.documentElement.style.setProperty(
+				"--startMonth",
+				period.startMonth
+			);
+
+			// Set the CSS variable for the selected material
+			document.documentElement.style.setProperty(
+				"--endMonth",
+				period.endMonth
+			);
+		});
+	} else {
+		console.error("Could not find periods for:", selectedGroup);
+	}
 }
 
 getGroups();

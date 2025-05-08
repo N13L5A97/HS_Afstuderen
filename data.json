@@ -2,10 +2,12 @@
     {
         "group": "Kamerplanten",
         "id": "kamerplanten",
-        "periods":{
-            "startMonth": 3,
-            "endMonth": 10
-        },
+        "periods": [
+            {
+                "startMonth": 3,
+                "endMonth": 10
+            }
+        ],
         "material": [
             {
                 "size": "0.5L"
@@ -48,14 +50,10 @@
     {
         "group": "Buitenplanten",
         "id": "buitenplanten",
-        "periods":[
+        "periods": [
             {
                 "startMonth": 3,
                 "endMonth": 4
-            },
-            {
-                "startMonth": 9,
-                "endMonth": 10
             }
         ],
         "material": [
@@ -98,14 +96,10 @@
     {
         "group": "Groente en Fruit",
         "id": "groente-en-fruit",
-        "periods":[
+        "periods": [
             {
-            "startMonth": 2,
-            "endMonth": 4
-            },
-            {
-                "startMonth": 6,
-                "endMonth": 7
+                "startMonth": 2,
+                "endMonth": 4
             }
         ],
         "material": [
