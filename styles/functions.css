@@ -1,18 +1,58 @@
+/* MEDIA QUERIES */
+/* tooltip only for desktop */
+@media (max-width: 768px) {
+	.tooltip {
+		display: none;
+	}
+}
+
+/* NO JAVASCRIPT */
+.type,
+.material {
+	display: none;
+}
+
+article:has(input[value="kamerplanten"]:checked) ~ article #kamerplanten-group,
+article:has(input[value="kamerplanten"]:checked)
+	~ article
+	#kamerplanten-materiaal {
+	display: block;
+}
+
+article:has(input[value="buitenplanten"]:checked)
+	~ article
+	#buitenplanten-group,
+article:has(input[value="buitenplanten"]:checked)
+	~ article
+	#buitenplanten-materiaal {
+	display: block;
+}
+
+article:has(input[value="groente-en-fruit"]:checked)
+	~ article
+	#groente-en-fruit-group,
+article:has(input[value="groente-en-fruit"]:checked)
+	~ article
+	#groente-en-fruit-materiaal {
+	display: block;
+}
+
+/* MATERIAL */
 /* own capacity input reveal */
 label:has(input[id="capacity"]) {
-    + input {
-        display: none;
-    }
+	+ input {
+		display: none;
+	}
 }
 
 label:has(input[id="capacity"]:checked) {
-    + input {
-        display: block;
-        margin-top: 1rem;
-    }
+	+ input {
+		display: block;
+		margin-top: 1rem;
+	}
 }
 
 /* disable other options */
-section:has(input[id="capacity"]:checked) #plantMaterial {
-    display: none;
+article:has(input[id="capacity"]:checked) #plantMaterial {
+	display: none;
 }

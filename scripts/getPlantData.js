@@ -4,8 +4,8 @@ async function getGroups() {
 	console.log(data);
 
 	// Remove radio buttons
-	const plantGroupSection = document.getElementById("plantGroup");
-	plantGroupSection.innerHTML = "";
+	const plantGroup = document.getElementById("plantGroup");
+	plantGroup.innerHTML = "";
 
 	// Create radio button for each group
 	data.forEach((group, index) => {
@@ -28,7 +28,7 @@ async function getGroups() {
 
 		div.appendChild(input);
 		div.appendChild(label);
-		plantGroupSection.appendChild(div);
+		plantGroup.appendChild(div);
 	});
 
 	// Call updatePlantTypes function to update plant types
@@ -55,8 +55,8 @@ function updatePlantTypes(data) {
 	console.log("Selected group:", selectedGroup);
 
 	// Remove radio buttons
-	const plantTypeSection = document.getElementById("plantType");
-	plantTypeSection.innerHTML = "";
+	const plantType = document.getElementById("plantType");
+	plantType.innerHTML = "";
 
 	// Find the selected group
 	let plantGroup = data.find((g) => g.group == selectedGroup);
@@ -86,7 +86,7 @@ function updatePlantTypes(data) {
 
 			div.appendChild(input);
 			div.appendChild(label);
-			plantTypeSection.appendChild(div);
+			plantType.appendChild(div);
 		});
 	} else {
 		console.error(
@@ -104,8 +104,8 @@ function updateMaterial(data) {
 	console.log("Selected group:", selectedGroup);
 
 	// Remove radio buttons
-	const plantMaterialSection = document.getElementById("plantMaterial");
-	plantMaterialSection.innerHTML = "";
+	const plantMaterial = document.getElementById("plantMaterial");
+	plantMaterial.innerHTML = "";
 
 	// Find the selected group
 	let plantGroup = data.find((g) => g.group == selectedGroup);
@@ -140,7 +140,7 @@ function updateMaterial(data) {
 
 			div.appendChild(input);
 			div.appendChild(label);
-			plantMaterialSection.appendChild(div);
+			plantMaterial.appendChild(div);
 		});
 	} else {
 		console.error(
