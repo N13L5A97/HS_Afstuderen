@@ -56,7 +56,7 @@ function updatePlantTypes(data) {
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
-	console.log("Selected group:", selectedGroup);
+	// console.log("Selected group:", selectedGroup);
 
 	// Remove radio buttons
 	const plantType = document.getElementById("plantType");
@@ -67,7 +67,7 @@ function updatePlantTypes(data) {
 
 	// If the group is found, find the types
 	if (plantGroup && plantGroup.type) {
-		console.log("Plant types for", selectedGroup, ":", plantGroup.type);
+		// console.log("Plant types for", selectedGroup, ":", plantGroup.type);
 
 		// Create radio buttons for each type in the selected group
 		plantGroup.type.forEach((type, index) => {
@@ -98,6 +98,14 @@ function updatePlantTypes(data) {
 			selectedGroup
 		);
 	}
+
+	// When selection changes update plant types and materials
+	const typeRadios = document.querySelectorAll('input[name="type"]');
+	typeRadios.forEach((radio) => {
+		radio.addEventListener("change", () => {
+			updatePeriods(data);
+		});
+	});
 }
 
 function updateMaterial(data) {
@@ -105,7 +113,7 @@ function updateMaterial(data) {
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
-	console.log("Selected group:", selectedGroup);
+	// console.log("Selected group:", selectedGroup);
 
 	// Remove radio buttons
 	const plantMaterial = document.getElementById("plantMaterial");
@@ -116,13 +124,6 @@ function updateMaterial(data) {
 
 	// If the group is found, find the types
 	if (plantGroup && plantGroup.material) {
-		console.log(
-			"Plant materials for",
-			selectedGroup,
-			":",
-			plantGroup.material
-		);
-
 		// Create radio buttons for each material in the selected group
 		plantGroup.material.forEach((material, index) => {
 			const div = document.createElement("div");
@@ -158,7 +159,6 @@ function updateMaterial(data) {
 		const selectedMaterial = document.querySelector(
 			'input[name="size"]:checked'
 		).value;
-		console.log("Selected material:", selectedMaterial);
 
 		// Set the CSS variable for the selected material
 		document.documentElement.style.setProperty(
@@ -178,7 +178,7 @@ function updateMaterial(data) {
 
 	getSelectedMaterial();
 
-	console.log("Capacity checkbox is unchecked");
+	// console.log("Capacity checkbox is unchecked");
 	// When selection changes update plant material sizes
 	const materialRadios = document.querySelectorAll('input[name="size"]');
 	materialRadios.forEach((radio) => {
@@ -191,13 +191,13 @@ function updateMaterial(data) {
 
 	capacityCheckbox.addEventListener("change", () => {
 		if (capacityCheckbox.checked) {
-			console.log("Capacity checkbox is checked");
+			// console.log("Capacity checkbox is checked");
 			//get amount that is put in the input field
 			const capacityInput = document.querySelector("#ownCapacity");
 
 			capacityInput.addEventListener("input", () => {
 				const capacityValue = capacityInput.value;
-				console.log("Capacity value:", capacityValue);
+				// console.log("Capacity value:", capacityValue);
 
 				//if value is empty set it to 1
 				if (capacityValue === "") {
@@ -230,22 +230,28 @@ function updatePeriods(data) {
 	const selectedGroup = document.querySelector(
 		'input[name="group"]:checked'
 	).value;
-	console.log("Selected group:", selectedGroup);
 
-	const fullYear = document.getElementById("fullYear");
+	// Get the selected group
+	const selectedType = document.querySelector(
+		'input[name="type"]:checked'
+	).value;
+	console.log("Selected type:", selectedType);
+
 	// Find the selected group
 	let plantGroup = data.find((g) => g.group == selectedGroup);
-	console.log("plant group:", plantGroup);
+	let plantType = plantGroup.type.find((t) => t.name == selectedType);
+
+	console.log(plantType);
+
+	const fullYear = document.getElementById("fullYear");
 
 	// If the group is found, find the types
-	if (plantGroup && plantGroup.periods) {
-		console.log("Plant periods", selectedGroup, ":", plantGroup.periods);
-
+	if (plantType && plantType.period) {
 		// Remove periods
 		fullYear.innerHTML = "";
 
 		// Create div for each period with class
-		plantGroup.periods.forEach((period) => {
+		plantType.period.forEach((period) => {
 			const div = document.createElement("div");
 			div.classList.add("period");
 
@@ -259,12 +265,14 @@ function updatePeriods(data) {
 				const d = new Date();
 				let month = d.getMonth();
 				const currentMonth = month + 1;
-				console.log("MAAND" + currentMonth);
+				// console.log("MAAND" + currentMonth);
 
 				// if currentmont is in a period make the period green otherwise red
-				if (currentMonth > period.endMonth){
+				if (currentMonth > period.endMonth) {
 					span.style.setProperty(`background-color`, "red");
-				} else if (currentMonth => startMonth && currentMonth <= endMonth){
+				} else if (
+					(currentMonth) => startMonth && currentMonth <= endMonth
+				) {
 					span.style.setProperty(`background-color`, "#5b954b");
 					span.style.setProperty(`color`, "#fff");
 				}
@@ -272,7 +280,7 @@ function updatePeriods(data) {
 
 			fullYear.appendChild(div);
 
-			console.log("period:", period.startMonth);
+			// console.log("period:", period.startMonth);
 
 			// Set the CSS variable for startMonth
 			div.style.setProperty(`--startMonth`, period.startMonth);

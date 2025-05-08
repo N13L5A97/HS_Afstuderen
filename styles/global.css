@@ -26,11 +26,11 @@ body {
 h1 {
 	font-size: clamp(30px, 5vw, 50px);
 	max-width: 70vw;
-	margin: 1rem 0 1rem 2rem;
+	margin: 1rem 2rem;
 	font-weight: 600;
 
 	+ p {
-		margin-left: 2rem;
+		margin: 0rem 2rem;
 	}
 }
 

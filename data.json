@@ -2,13 +2,6 @@
     {
         "group": "Kamerplanten",
         "id": "kamerplanten",
-        "periods": [
-            {
-                "startMonth": 3,
-                "endMonth": 10,
-                "ratio": 3
-            }
-        ],
         "material": [
             {
                 "size": "0.5L"
@@ -24,97 +17,43 @@
             {
                 "name": "Bladplanten",
                 "id": "bladplanten",
-                "apl": 0.3
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 1,
+                        "endMonth": 12,
+                        "ratio": 24
+                    }
+                ]
             },
             {
                 "name": "Bloeiende planten",
                 "id": "bloeiende-planten",
-                "apl": 0.3
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 1,
+                        "endMonth": 12,
+                        "ratio": 24
+                    }
+                ]
             },
             {
                 "name": "Cactussen en vetplanten",
                 "id": "cactussen-en-vetplanten",
-                "apl": 0.3
-            },
-            {
-                "name": "Klim- en hangplanten",
-                "id": "klim-en-hangplanten",
-                "apl": 0.3
-            },
-            {
-                "name": "Palmen",
-                "id": "palmen",
-                "apl": 0.3
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 1,
+                        "endMonth": 12
+                    }
+                ]
             }
         ]
     },
     {
         "group": "Buitenplanten",
         "id": "buitenplanten",
-        "periods": [
-            {
-                "startMonth": 3,
-                "endMonth": 4,
-                "ratio": 1
-            },
-            {
-                "startMonth": 9,
-                "endMonth": 10,
-                "ratio": 1
-            }
-        ],
-        "material": [
-            {
-                "size": "3L",
-                "apl": 0.3
-            },
-            {
-                "size": "5L",
-                "apl": 0.3
-            },
-            {
-                "size": "10L",
-                "apl": 0.3
-            }
-        ],
-        "type": [
-            {
-                "name": "Potplanten",
-                "id": "potplanten",
-                "apl": 0.3
-            },
-            {
-                "name": "Bloembollen",
-                "id": "bloembollen",
-                "apl": 0.3
-            },
-            {
-                "name": "Snijbloemen",
-                "id": "snijbloemen",
-                "apl": 0.3
-            },
-            {
-                "name": "Perkgoed",
-                "id": "perkgoed",
-                "apl": 0.3
-            }
-        ]
-    },
-    {
-        "group": "Groente en Fruit",
-        "id": "groente-en-fruit",
-        "periods": [
-            {
-                "startMonth": 2,
-                "endMonth": 4,
-                "ratio": 1
-            },
-            {
-                "startMonth": 7,
-                "endMonth": 8,
-                "ratio": 1
-            }
-        ],
         "material": [
             {
                 "size": "3L"
@@ -128,24 +67,105 @@
         ],
         "type": [
             {
-                "name": "Aardappels",
-                "id": "aardappels",
-                "apl": 0.3
+                "name": "Potplanten",
+                "id": "potplanten",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 4,
+                        "endMonth": 9,
+                        "ratio": 3
+                    }
+                ]
             },
             {
-                "name": "Bieten",
-                "id": "bieten",
-                "apl": 0.3
+                "name": "Bloemen",
+                "id": "bloemen",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 3,
+                        "endMonth": 7,
+                        "ratio": 3
+                    }
+                ]
+            },
+            {
+                "name": "Perkgoed",
+                "id": "perkgoed",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 1,
+                        "endMonth": 12,
+                        "ratio": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "group": "Groente en Fruit",
+        "id": "groente-en-fruit",
+        "material": [
+            {
+                "size": "3L"
+            },
+            {
+                "size": "5L"
+            },
+            {
+                "size": "10L"
+            }
+        ],
+        "type": [
+            {
+                "name": "Aardappels, bieten en uien",
+                "id": "aardappels-bieten-uien",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 3,
+                        "endMonth": 7,
+                        "ratio": 3
+                    }
+                ]
+            },
+            {
+                "name": "Bladgroenten",
+                "id": "bladgroente",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 5,
+                        "endMonth": 7,
+                        "ratio": 6
+                    }
+                ]
             },
             {
                 "name": "Fruit",
                 "id": "fruit",
-                "apl": 0.3
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 3,
+                        "endMonth": 9,
+                        "ratio": 3
+                    }
+                ]
             },
             {
-                "name": "Vollegrondsgroente",
-                "id": "vollegrondsgroente",
-                "apl": 0.3
+                "name": "Tomaten, pepers en komkommers",
+                "id": "tomaten-pepers-komkommers",
+                "dilution": 0.1,
+                "period": [
+                    {
+                        "startMonth": 5,
+                        "endMonth": 9,
+                        "ratio": 3
+                    }
+                ]
             }
         ]
     }
