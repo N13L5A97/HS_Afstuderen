@@ -55,7 +55,9 @@
 								id="groente-en-fruit"
 								value="groente-en-fruit"
 							/>
-							<label for="groente-en-fruit"> Groente en Fruit</label>
+							<label for="groente-en-fruit">
+								Groente en Fruit</label
+							>
 						</div>
 					</div>
 				</article>
@@ -205,9 +207,9 @@
 				<article>
 					<h2>Materiaal</h2>
 					<p>
-						Kies hier de grootte van het materiaal dat je gebruikt. Aan
-						de hand hiervan zie je wat de mengverhouding van het product
-						is.
+						Kies hier de grootte van het materiaal dat je gebruikt.
+						Aan de hand hiervan zie je wat de mengverhouding van het
+						product is.
 					</p>
 					<div id="plantMaterial">
 						<div id="kamerplanten-materiaal" class="material">
@@ -300,7 +302,7 @@
 							</div>
 						</div>
 					</div>
-		
+
 					<label for="capacity">
 						<input type="checkbox" id="capacity" />
 						Zelf de inhoud van je materiaal invullen
@@ -316,7 +318,7 @@
 						<!--bottle  -->
 						<div>
 							<svg
-								width="70"
+								width="50"
 								viewBox="0 0 48 93"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +334,7 @@
 						<!-- gieter -->
 						<div>
 							<svg
-								width="200"
+								width="150"
 								viewBox="0 0 136 93"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -356,12 +358,36 @@
 				<h2>Voedingsperiode</h2>
 				<p>
 					Voor het beste restultaat moet deze planten groep
-					<span id="ratio"> 3x </span> worden toegepast binnen de
+					<span id="ratio"> 3 </span>keer worden toegepast binnen de
 					aangetoonde voedingsperiode. Hieronder zie je de
 					voedingsperiode van de geselecteerde plantengroep en in
 					welke delen van deze periode de voeding toegepast moet
 					worden.
 				</p>
+				<div>
+					<div id="period">
+						<div id="year"></div>
+						<div id="totalPeriod">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+						</div>
+					</div>
+					<div id="months">
+						<span>jan</span>
+						<span>feb</span>
+						<span>mrt</span>
+						<span>apr</span>
+						<span class="currentMonth">mei</span>
+						<span>jun</span>
+						<span>jul</span>
+						<span>aug</span>
+						<span>sep</span>
+						<span>okt</span>
+						<span>nov</span>
+						<span>dec</span>
+					</div>
+				</div>
 			</section>
 		</main>
 		<script src="./scripts/getPlantData.js"></script>
