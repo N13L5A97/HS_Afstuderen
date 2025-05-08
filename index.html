@@ -225,7 +225,7 @@
 								name="material_1"
 								id="1L"
 								value="1L"
-                                checked
+								checked
 							/>
 							<label for="1L"> 1L </label>
 						</div>
@@ -301,20 +301,21 @@
 				</div>
 
 				<label for="capacity">
-					<input type="checkbox" id="capacity"/>
+					<input type="checkbox" id="capacity" />
 					Zelf de inhoud van je materiaal invullen
 				</label>
 				<input
 					type="number"
 					id="ownCapacity"
 					placeholder="Inhoud in liters"
+					step="0.01"
+					oninput="validateDecimals(this)"
 				/>
 				<div class="illustrations">
 					<!--bottle  -->
 					<div>
 						<svg
-							width="48"
-							height="93"
+							width="70"
 							viewBox="0 0 48 93"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -330,8 +331,7 @@
 					<!-- gieter -->
 					<div>
 						<svg
-							width="136"
-							height="93"
+							width="200"
 							viewBox="0 0 136 93"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -352,6 +352,7 @@
 			</section>
 		</main>
 		<script src="./scripts/getPlantData.js"></script>
+		<script src="./scripts/.js"></script>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		<script>
 			lucide.createIcons();
