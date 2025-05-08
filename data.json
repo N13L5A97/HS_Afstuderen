@@ -45,7 +45,8 @@
                 "period": [
                     {
                         "startMonth": 1,
-                        "endMonth": 12
+                        "endMonth": 12,
+                        "ratio": 24
                     }
                 ]
             }
